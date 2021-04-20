@@ -16,7 +16,7 @@ class LRUCacheImplementation(private val limit: Int) {
 
     private fun deleteNode(node: Node?) {
         node?.prev?.next = node?.next
-        node?.next!!.prev = node.prev
+        node?.next?.prev = node?.prev
     }
 
     private fun addToHead(node: Node?) {
